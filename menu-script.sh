@@ -46,7 +46,11 @@ print_menu_level2 () {
         ;;    
 
     5)
-        exit
+        echo "Cài đặt ${menuService[4]} "
+        ;;
+
+    6)
+        echo "Cảm ơn bạn rất nhiều."
         ;;
     *)
         echo "Lựa chọn không hợp lệ. Vui lòng chọn lại."
