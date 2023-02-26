@@ -50,7 +50,7 @@ print_menu_level2 () {
         ;;
 
     6)
-        echo "Cảm ơn bạn rất nhiều."
+        echo "Thank you, See again !"
         ;;
     *)
         echo "Lựa chọn không hợp lệ. Vui lòng chọn lại."
