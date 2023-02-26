@@ -6,6 +6,10 @@ menu=("Cat Dat Dich Vu" "Check He Thong" "Thoát")
 # Variable Array Menu list level 2
 menuService=("Prometheus/Grafana" "Rancher" "Zabbix" "Thoát")
 
+# ################################
+
+
+
 
 # Function list menu level1
 print_menu_level1 () {
