@@ -1,17 +1,13 @@
 #!/bin/bash
+#import biến môi trường vào project
+source ./config.sh
+##########################
 
-# Variable Array Menu list level 1
-
-# shellcheck disable=SC2207
-# shellcheck disable=SC2068
-
+# Khai báo biến
 menu=("${arrayMenu[@]}")
+menuService=("${menuService[@]}")
 
-# Print the imported array
 
-
-# Variable Array Menu list level 2
-menuService=("Prometheus" "Prometheus Exporter" "Grafana" "Zabbix" "Zabbix Agent" "Thoát")
 
 # ################################
 
@@ -28,7 +24,7 @@ print_menu_level2() {
     echo "                             $((i + 1)). ${menuService[$i]}                          "
   done
 
-  read -p "Vui lòng chọn một lựa chọn dịch vụ montor: " choice
+  read -p "Vui lòng chọn một lựa chọn dịch vụ montor [1-${#menuService[@]}]:" choice
   case $choice in
   1)
     echo "Cài đặt ${menuService[0]} "
@@ -64,21 +60,20 @@ print_menu_level2() {
 # Giao diện hiển thị
 
 echo "#################################################################################"
-echo "####                          Chương trình tự động LINUX                     ####"
-echo "####                     Distribution Linux: Ubuntu/RHEL/CentOS              ####"
-echo "####                                   ********                              ####"
-echo "####                               CREATE BY DangTuan                        ####"
-echo "####                                   version 1.0                           ####"
-echo "--------------------------------------------------------------------------------"
+echo "----                          Chương trình tự động LINUX                     ----"
+echo "----                     Distribution Linux: Ubuntu/RHEL/CentOS              ----"
+echo "----                                  ********                               ----"
+echo "----                              CREATE BY DangTuan                         ----"
+echo "----                                 version 1.0                             ----"
+echo "----                                                                         ----"
 
-print_menu_level1
+                                        print_menu_level1
 
-echo "--------------------------------------------------------------------------------"
-echo "##                                                                            ##"
-echo "#####                                                                     ######"
-echo "################################################################################"
-echo "################################################################################"
-read -p "Vui lòng chọn một lựa chọn [1-4]: " choice
+echo "----                                                                         ----"
+echo "----                                                                         ----"
+echo "---------------------------------------------------------------------------------"
+echo "---------------------------------------------------------------------------------"
+read -p "Vui lòng chọn từ [1-${#menu[@]}]: " choice
 
 case $choice in
 1)
@@ -89,9 +84,13 @@ case $choice in
   source ./setup/setup-new-server/setup-new-server.sh
   ;;
 3)
-  echo "Chương trình hệ thống......."
+  echo "Setup server dev."
   ;;
 4)
+  echo "Check basic systems."
+   source ./check-systems/check-systems.sh
+  ;;
+5)
   exit
   ;;
 *)
