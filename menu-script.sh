@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Variable Array Menu list level 1
-menu=("Cài đặt dịch vụ service thuần" "Cài đặt máy chủ mới" "Check hệ thống cơ bản" "Thoát")
+menu=("Cài đặt dịch vụ service Linux" "Cài đặt New Server " "Check systems basic" "Thoát")
 
 # Variable Array Menu list level 2
 menuService=("Prometheus" "Prometheus Exporter" "Grafana" "Zabbix" "Zabbix Agent" "Thoát")
