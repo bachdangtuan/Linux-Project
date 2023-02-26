@@ -5,7 +5,7 @@
 # shellcheck disable=SC2207
 # shellcheck disable=SC2068
 
-menu=($(source ./config.sh; echo ${arrayMenu[@]}))
+menu=("${arrayMenu[@]}")
 
 # Print the imported array
 
