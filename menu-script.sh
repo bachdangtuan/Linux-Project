@@ -4,7 +4,7 @@
 menu=("Cat Dat Dich Vu" "Check He Thong" "Thoát")
 
 # Variable Array Menu list level 2
-menuService=("Prometheus/Grafana" "Rancher" "Zabbix" "Thoát")
+menuService=("Prometheus" "Prometheus Exporter" "Grafana" "Zabbix" "Zabbix Agent" "Thoát")
 
 # ################################
 
@@ -29,36 +29,32 @@ print_menu_level2 () {
         case $choice in
     1)
         echo "Cài đặt ${menuService[0]} "
-        source ./setup/install-prometheus.sh
+        source ./setup/prometheus-grafana/install-prometheus.sh
 
         ;;
     2)
         echo "Cài đặt ${menuService[1]} "
+        source ./setup/prometheus-grafana/install-prometheus-exporter.sh
         ;;
     3)
         echo "Cài đặt ${menuService[2]} "
+        source ./setup/zabbis/install-zabbix.sh
         ;;
 
     4)
         echo "Cài đặt ${menuService[3]} "
         ;;    
+
+    5)
+        exit
+        ;;
     *)
         echo "Lựa chọn không hợp lệ. Vui lòng chọn lại."
         ;;
 esac      
 }
 
-
-
-
-
-
-
-
-
-
 # Giao diện hiển thị
-
 
 echo "#################################################################################"
 echo "####                          Chương trình tự động LINUX                     ####"
