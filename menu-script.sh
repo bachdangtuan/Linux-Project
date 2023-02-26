@@ -2,9 +2,9 @@
 # Import variables from config.sh
 source ./config.sh
 
-echo "$arrayMenu"
 # Variable Array Menu list level 1
-menu=("Cài đặt dịch vụ service Linux" "Cài đặt New Server " "Check systems basic" "Thoát")
+# shellcheck disable=SC2206
+menu=($arrayMenu)
 
 # Variable Array Menu list level 2
 menuService=("Prometheus" "Prometheus Exporter" "Grafana" "Zabbix" "Zabbix Agent" "Thoát")
