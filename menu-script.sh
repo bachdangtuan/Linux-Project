@@ -29,6 +29,8 @@ print_menu_level2 () {
         case $choice in
     1)
         echo "Cài đặt ${menuService[0]} "
+        source ./setup/install-prometheus.sh
+
         ;;
     2)
         echo "Cài đặt ${menuService[1]} "
