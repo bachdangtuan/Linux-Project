@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Variable Array Menu list level 1
-menu=("Cat Dat Dich Vu" "Check He Thong" "Thoát")
+menu=("Cài đặt dịch vụ service thuần" "Cài đặt máy chủ mới" "Check hệ thống cơ bản" "Thoát")
 
 # Variable Array Menu list level 2
 menuService=("Prometheus" "Prometheus Exporter" "Grafana" "Zabbix" "Zabbix Agent" "Thoát")
@@ -25,7 +25,7 @@ print_menu_level2 () {
         echo "                             $((i+1)). ${menuService[$i]}                          "
         done
         
-        read -p "Vui lòng chọn một lựa chọn dịch vụ montor [1-3]: " choice
+        read -p "Vui lòng chọn một lựa chọn dịch vụ montor: " choice
         case $choice in
     1)
         echo "Cài đặt ${menuService[0]} "
@@ -84,7 +84,8 @@ case $choice in
         print_menu_level2
         ;;
     2)
-        date
+        echo "Hệ thống cài đặt máy chủ mới bắt đầu......."
+        source ./setup/setup-new-server/setup-new-server.sh
         ;;
     3)
         exit
