@@ -37,7 +37,7 @@ print_menu_level2() {
     ;;
   3)
     echo "Cài đặt ${menuService[2]} "
-    source ./setup/zabbis/install-zabbix.sh
+    source ./setup/zabbix/install-zabbix.sh
     ;;
 
   4)
